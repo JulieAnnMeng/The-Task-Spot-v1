@@ -1,0 +1,43 @@
+{
+    "lists": [
+      {
+        "id": 1,
+        "title":"Groceries",
+        "description":"What to buy at Trader Joes",
+        "category":"food",
+        "tasks": [
+            {
+                "id":1,
+                "name":"apples",
+                "date":"2021-09-04"
+
+            },
+            {
+                "id":2,
+                "name":"steak",
+                "date":"2021-09-04"
+            }
+        ]
+      },
+      {
+        "id": 2,
+        "title":"House Chores",
+        "description":"Things to do around the house",
+        "category":"domestic",
+        "tasks": [
+            {
+                "id":1,
+                "name":"clean room",
+                "date":"2021-09-04"
+
+            },
+            {
+                "id":2,
+                "name":"take out trash",
+                "date":"2021-09-04"
+            }
+        ]
+      }
+
+    ]
+  }

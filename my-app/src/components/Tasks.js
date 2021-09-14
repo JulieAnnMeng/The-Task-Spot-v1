@@ -1,12 +1,11 @@
 
 
-function Tasks() {
+function Tasks({name, date}) {
 // props.map to make each list
-
     return (
         <tr>
-            <td>09/13/2021</td>
-            <td>Setup React Project</td>
+            <td>{date}</td>
+            <td>{name}</td>
             <td><input type="checkbox" name="task" /></td>
             <td><button>✎</button></td>
             <td><button>X</button></td>
