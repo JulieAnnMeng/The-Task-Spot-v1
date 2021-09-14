@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  background-color: rgba(25, 25, 112, 0.657);
+}
+
+button {
+  background-color: rgba(79, 79, 209, 0.657);
+}
+
+.listCards {
+  background-color: rgba(152, 200, 255, 0.493);
+}
+
+.newList {
+  background-color: lightskyblue;
+}
