@@ -1,7 +1,8 @@
 
 
-function Tasks({id, name, date, handleTaskDelete}) {
+function Tasks({name, date, handleTaskDelete}) {
 // props.map to make each list
+
 
     
     return (
@@ -9,7 +10,7 @@ function Tasks({id, name, date, handleTaskDelete}) {
             <td>{date}</td>
             <td>{name}</td>
             <td><input type="checkbox" name="task" /></td>
-            <td><button onClick={()=>handleTaskDelete(id)}>X</button></td>
+            <td><button onClick={()=>handleTaskDelete(name)}>X</button></td>
         </tr>
     );
 }

@@ -2,7 +2,7 @@ import Lists from './Lists';
 
 
 
-function ListLists({lists, handleTaskDelete}) {
+function ListLists({lists, handleTaskPatch}) {
     console.log(lists)
 
     const listList = lists.map((list)=>{
@@ -14,7 +14,7 @@ function ListLists({lists, handleTaskDelete}) {
             description={list.description}
             tasks={list.tasks}
             date={list.date}
-            handleTaskDelete={handleTaskDelete}
+            handleTaskPatch={handleTaskPatch}
             />
         )
     })
