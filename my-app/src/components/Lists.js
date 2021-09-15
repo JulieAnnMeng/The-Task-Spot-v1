@@ -3,22 +3,22 @@ import NewTask from './NewTask';
 
 
 
-function Lists({ id, title, description, tasks, date, handleTaskPatch, handleListDelete}) {
+function Lists({ id, title, description, tasks, handleTaskPatch, handleListDelete}) {
     if(!tasks){
      return <h2>loading</h2>
     }
 
     function handleTaskDelete (name) {
-        const newTasksList = tasks.filter(task => task !== name);
+        const newTasksList = tasks.filter(task => task.name !== name);
         handleTaskPatch(id, newTasksList);
     }
 
-    const taskList = tasks.map((task)=>{
+    const taskList = tasks.map((task, index)=>{
         return(
             <Tasks 
-            key={task}
-            name={task}
-            date={date}
+            key={index}
+            name={task.name}
+            date={task.date}
             handleTaskDelete={handleTaskDelete}
             />
         )

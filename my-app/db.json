@@ -5,10 +5,31 @@
       "title": "Groceries",
       "description": "What to buy at Trader Joes",
       "category": "food",
-      "date": "2021-09-16",
       "tasks": [
-        "steak",
-        "apples"
+        {
+          "id":1,
+          "name": "apples",
+          "date": "2021-09-16",
+          "checked": true
+        }, 
+        {
+          "id":2,
+          "name": "steak",
+          "date": "2021-10-16",
+          "checked": false
+        },
+        {
+          "id":3,
+          "name": "goat cheese",
+          "date": "2021-09-16",
+          "checked": false
+        }, 
+        {
+          "id":4,
+          "name": "peanut butter",
+          "date": "2021-10-16",
+          "checked": false
+        }
       ]
     },
     {
@@ -16,10 +37,19 @@
       "title": "House Chores",
       "description": "Things to do around the house",
       "category": "domestic",
-      "date": "2021-09-04",
       "tasks": [
-        "clean room",
-        "take out trash"
+        {
+          "id":1,
+          "name": "clean room",
+          "date": "2021-09-16",
+          "checked": true
+        }, 
+        {
+          "id":2,
+          "name": "clean room",
+          "date": "2021-10-16",
+          "checked": false
+       }
       ]
     }
   ]

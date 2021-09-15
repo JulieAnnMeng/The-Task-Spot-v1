@@ -13,7 +13,7 @@ function ListLists({lists, handleTaskPatch, handleListDelete}) {
             title={list.title}
             description={list.description}
             tasks={list.tasks}
-            date={list.date}
+            
             handleTaskPatch={handleTaskPatch}
             handleListDelete={handleListDelete}
             />
