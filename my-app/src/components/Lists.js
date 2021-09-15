@@ -3,7 +3,7 @@ import NewTask from './NewTask';
 
 
 
-function Lists({ id, title, description, tasks, date, handleTaskPatch}) {
+function Lists({ id, title, description, tasks, date, handleTaskPatch, handleListDelete}) {
     if(!tasks){
      return <h2>loading</h2>
     }
@@ -31,8 +31,10 @@ function Lists({ id, title, description, tasks, date, handleTaskPatch}) {
         <div>
             <table className="listCards">
                 <caption className='listCards'>
+                        
                     <h3>{title}</h3>
-                    <>{description}</>
+                    <button onClick={()=>handleListDelete(id)}> x </button>
+                    <div> {description} </div>
                     <br /><br />
                     
                     <button>Add</button>
