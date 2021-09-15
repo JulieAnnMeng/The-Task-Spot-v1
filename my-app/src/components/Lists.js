@@ -3,7 +3,7 @@ import NewTask from './NewTask';
 
 
 
-function Lists({ title, description, tasks}) {
+function Lists({ id, title, description, tasks, date, handleTaskDelete}) {
     if(!tasks){
      return <h2>loading</h2>
     }
@@ -11,9 +11,11 @@ function Lists({ title, description, tasks}) {
     const taskList = tasks.map((task)=>{
         return(
             <Tasks 
-            key={task.id}
-            name={task.name}
-            date={task.date}
+            key={task}
+            listId={id}
+            name={task}
+            date={date}
+            handleTaskDelete={handleTaskDelete}
             />
         )
     })
@@ -42,9 +44,6 @@ function Lists({ title, description, tasks}) {
                         </th>
                         <th>
                             <h4>Done?</h4>
-                        </th>
-                        <th>
-                            <h4>Edit</h4>
                         </th>
                         <th>
                             <h4>Delete</h4>
