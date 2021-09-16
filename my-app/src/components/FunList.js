@@ -1,19 +1,22 @@
 //Julie don't touch this 
 //issue is rendering
 
-//import { useState} from 'react';
-//import Lists from './Lists';
-//import { useParams, useHistory, Link } from 'react-router-dom'
+import { useState} from 'react';
+import Lists from './Lists';
+// import { useParams, useHistory, Link } from 'react-router-dom'
 
 
-//const funURL = "https://www.boredapi.com/api/activity"
+
 function FunList({lists, handleTaskPatch, handleListDelete}) {
-    /*
-    const [funActivity, setFunActivity]= useState(null)
-    
-    const funList = lists.find(list => list.title === "Fun")
-    const{id, title, description, tasks}=funList
+    const funList = lists.find(list => list.title === "Fun");
+    // const{id, title, description, tasks} = funList;
+    // console.log(funList);
 
+    const [toggleAdd, setToggleAdd] = useState(false);
+    const [funActivity, setFunActivity]= useState("");
+
+    const funURL = "https://www.boredapi.com/api/activity";
+    const apiFun = "Click 'Get Fun' to see fun ideas!";
 
     function getFun(){
         fetch(funURL)
@@ -25,59 +28,68 @@ function FunList({lists, handleTaskPatch, handleListDelete}) {
     const blankForm = {date: "", task: ""};
     const [formData, setFormData] = useState(blankForm);
 
+    function addFunForm (){
+        setToggleAdd(!toggleAdd);
+    }
+
+    function boardAdd (funActivity) {
+        debugger;
+    }
+
     function handleFormChange(e){
         let name = e.target.name;
         let value = e.target.value;
         setFormData({...formData, [name]: value})
+        debugger;
     }
 
     function handleSubmit(e){
         e.preventDefault();
+        debugger;
         handleNewTask(formData);
     }
     
     function handleNewTask(formData){
-        let newID = tasks.at(-1).id + 1;
+        let newID = funList.tasks.at(-1).id + 1;
         const newTask = {id: newID, name: formData.task, date: formData.date, checked: false};
-        tasks.push(newTask);
-        handleTaskPatch(id, tasks);
+        funList.tasks.push(newTask);
+        handleTaskPatch(funList.id, funList.tasks);
     }
-*/
 
     return (
-        <div>{/*
+        <div>
             <h2>Plan fun activities below</h2>
-            <button className="funListAdd">Add Fun</button>
-            <button className="apiFunAdd" onClick={getFun}>Get Fun</button>
-            
-            <form className="funListAdd" onSubmit={handleSubmit}>
-                <h3>Add to your fun below</h3>
-                <input
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={handleFormChange}
-                />
+            <button className="funListAdd" onClick={addFunForm}>Add Fun</button>
+            {toggleAdd ? 
+                <form className="funListAdd" onSubmit={handleSubmit}>
+                    <h3>Add to your fun below</h3>
+                    <input
+                        type="date"
+                        name="date"
+                        value={formData.date}
+                        onChange={handleFormChange}
+                    />
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="fun task"
+                        value={formData.task}
+                        onChange={handleFormChange}
+                    />
+                    <br /><br />
+                    <button type="submit">Submit</button>
+                </form> 
+            : null }
 
-                <input
-                type="text"
-                name="name"
-                placeholder="fun task"
-                value={formData.name}
-                onChange={handleFormChange}
-                />
-                
-                <br /><br />
-                <button type="submit">Submit</button>
-            </form>
-            <form className="apiFunAdd" onSubmit={handleSubmit}>
+            {/* <form className="apiFunAdd" onSubmit={handleSubmit}> */}
                 <h3>Get fun ideas below</h3>
-                <h5>{funActivity ? funActivity : "random fun idea"}</h5>
-                <input
-                type="hidden"
+                <button className="apiFunAdd" onClick={getFun}>Get Fun</button>
+                <h5>{funActivity ? funActivity : apiFun} <button onClick={() => boardAdd(funActivity)}>Add Fun!</button></h5>
+                {/* <input
+                // type="hidden"
                 name="name"
                 placeholder="fun task"
-                value={funActivity}
+                value={funActivity ? funActivity : "random fun idea"}
                 onChange={handleFormChange}
                 />
                 <input
@@ -87,19 +99,23 @@ function FunList({lists, handleTaskPatch, handleListDelete}) {
                 onChange={handleFormChange}
                  />
                 <br />
-                <button type="submit">Submit</button>
-            </form>
-            <Lists 
-            key={id}
-            id={id}
-            title={title}
-            description={description}
-            tasks={tasks}
+                <button type="submit">Submit</button> */}
+            {/* </form> */}
             
-            handleTaskPatch={handleTaskPatch}
-            handleListDelete={handleListDelete}
-            />
-            */}
+
+            {funList ? 
+                <Lists 
+                    key={funList.id}
+                    id={funList.id}
+                    title={funList.title}
+                    description={funList.description}
+                    tasks={funList.tasks}
+                    
+                    handleTaskPatch={handleTaskPatch}
+                    handleListDelete={handleListDelete}
+                /> 
+            : <h2>Loading...</h2> }
+            
         </div>
   );
 }

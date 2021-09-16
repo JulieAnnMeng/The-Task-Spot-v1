@@ -2,6 +2,33 @@
   "lists": [
     {
       "id": 1,
+      "title": "Fun",
+      "description": "Fun activity ideas",
+      "tasks": [
+        {
+          "id": 1,
+          "name": "play tennis",
+          "date": "2021-09-16",
+          "priority": false,
+          "checked": true
+        },
+        {
+          "id": 2,
+          "name": "Birthday party",
+          "date": "2021-10-07",
+          "priority": true,
+          "checked": false
+        },
+        {
+          "id": 3,
+          "name": "Halloween party",
+          "date": "2021-10-31",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": 2,
       "title": "Groceries",
       "description": "What to buy at Trader Joes",
       "tasks": [
@@ -36,7 +63,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "House Chores",
       "description": "Things to do around the house",
       "tasks": [
@@ -53,20 +80,6 @@
           "date": "2021-10-16",
           "priority": true,
           "checked": false
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Fun",
-      "description": "Fun activity ideas",
-      "tasks": [
-        {
-          "id": 1,
-          "name": "play tennis",
-          "date": "2021-09-16",
-          "priority": false,
-          "checked": true
         }
       ]
     },
@@ -90,6 +103,12 @@
           "checked": true
         }
       ]
+    }
+  ],
+  "funCards": [
+    {
+      "id": 1,
+      "activity": "Watch the sunset or the sunrise"
     }
   ]
 }
