@@ -27,3 +27,8 @@ button {
 .newList {
   background-color: lightskyblue;
 }
+
+footer {
+  background-color: gray;
+  color: white;
+}
