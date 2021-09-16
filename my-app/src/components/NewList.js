@@ -11,7 +11,7 @@ function NewList({lists, handleNewList}) {
     */
 
     const blankForm = {
-        id: lists.at(-1) + 1,
+        id: lists.at(-1).id + 1,
         title: "",
         description: "",
         tasks:[]
