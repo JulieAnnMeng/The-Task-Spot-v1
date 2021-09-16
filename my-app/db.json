@@ -9,25 +9,29 @@
           "id": 1,
           "name": "apples",
           "date": "2021-09-16",
-          "checked": false
+          "priority": false,
+          "checked": true
         },
         {
           "id": 2,
           "name": "steak",
           "date": "2021-10-16",
+          "priority": false,
           "checked": false
         },
         {
           "id": 3,
           "name": "goat cheese",
           "date": "2021-09-16",
-          "checked": false
+          "priority": false,
+          "checked": true
         },
         {
           "id": 4,
           "name": "peanut butter",
           "date": "2021-10-16",
-          "checked": true
+          "priority": false,
+          "checked": false
         }
       ]
     },
@@ -40,12 +44,14 @@
           "id": 1,
           "name": "clean room",
           "date": "2021-09-16",
+          "priority": false,
           "checked": true
         },
         {
           "id": 2,
           "name": "clean room",
           "date": "2021-10-16",
+          "priority": true,
           "checked": false
         }
       ]
@@ -59,6 +65,7 @@
           "id": 1,
           "name": "play tennis",
           "date": "2021-09-16",
+          "priority": false,
           "checked": true
         }
       ]
@@ -72,7 +79,15 @@
           "id": 1,
           "name": "take dogs for walk",
           "date": "2021-09-22",
+          "priority": true,
           "checked": false
+        },
+        {
+          "id": 2,
+          "name": "give dog a bath",
+          "date": "2021-09-16",
+          "priority": true,
+          "checked": true
         }
       ]
     }

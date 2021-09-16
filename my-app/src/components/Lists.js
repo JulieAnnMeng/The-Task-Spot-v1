@@ -26,18 +26,13 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
         } else {
             newID = 1;
         }
-        const newTask = {id: newID, name: formData.task, date: formData.date, checked: false};
+        const newTask = {id: newID, name: formData.task, date: formData.date, priority: formData.priority, checked: false};
         tasks.push(newTask);
         handleTaskPatch(id, tasks);
     }
 
     function handleTaskUpdate (updatedTask) {
-        tasks.map(task => { 
-            if(task.id === updatedTask.id) {
-                task.checked = updatedTask.checked;
-        }});
-        // const newTasksList = {...tasks, task};
-        debugger;
+        tasks.map(task => task.id === updatedTask.id ? task.checked = updatedTask.checked : false)
         handleTaskPatch(id, tasks);
     }
 
@@ -52,6 +47,7 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
                 name={task.name}
                 date={task.date}
                 checked={task.checked}
+                priority={task.priority}
                 handleTaskDelete={handleTaskDelete}
                 handleTaskUpdate={handleTaskUpdate}
                 />
@@ -84,13 +80,13 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
                 <tbody>
                     <tr>
                         <th>
-                            <h4>Date</h4>
+                            <h4>Done?</h4>
                         </th>
                         <th>
                             <h4>Task</h4>
                         </th>
                         <th>
-                            <h4>Done?</h4>
+                            <h4>Date</h4>
                         </th>
                         <th>
                             <h4>Delete</h4>

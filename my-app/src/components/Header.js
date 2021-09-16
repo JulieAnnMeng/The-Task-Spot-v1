@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom"
 
 function Header() {
-  // CSS to make links look like buttons
 
   return (
     <header>

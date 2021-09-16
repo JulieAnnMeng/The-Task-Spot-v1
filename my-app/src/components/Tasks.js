@@ -1,6 +1,6 @@
 
 
-function Tasks({task, name, date, checked, handleTaskDelete, handleTaskUpdate}) {
+function Tasks({task, name, date, priority, checked, handleTaskDelete, handleTaskUpdate}) {
 // props.map to make each list
 
 
@@ -9,12 +9,17 @@ function Tasks({task, name, date, checked, handleTaskDelete, handleTaskUpdate}) 
         handleTaskUpdate(task)
     }
 
+    const taskStyle = {
+        color: priority ? "red" : "black",
+        textDecorationLine: checked ? 'line-through' : null
+    }
+
     
     return (
-        <tr>
-            <td>{date}</td>
-            <td>{name}</td>
+        <tr style={taskStyle}>
             <td><input type="checkbox" name="task" checked={checked} onChange={() => handleComplete(task)}/></td>
+            <td>{name}</td>
+            <td>{date}</td>
             <td><button onClick={()=>handleTaskDelete(name)}>X</button></td>
         </tr>
     );

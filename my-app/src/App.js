@@ -27,7 +27,6 @@ function App() {
    }
 
       function handleTaskPatch(id, tasks){
-        debugger;
         fetch(`http://localhost:3001/lists/${id}`, {
           method: "PATCH",
           headers: {"Content-Type": "application/json"},
