@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { useParams, useHistory, Link } from 'react-router-dom'
+//issue is tasks object within the form 
+//import { useParams, useHistory, Link } from 'react-router-dom'
 
 
 function NewList({lists, handleNewList}) {

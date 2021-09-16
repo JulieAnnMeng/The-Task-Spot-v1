@@ -1,3 +1,6 @@
+//Julie don't touch this 
+//issue is rendering
+
 //import { useState} from 'react';
 //import Lists from './Lists';
 //import { useParams, useHistory, Link } from 'react-router-dom'
@@ -8,16 +11,8 @@ function FunList({lists, handleTaskPatch, handleListDelete}) {
     /*
     const [funActivity, setFunActivity]= useState(null)
     
-    const fun = lists.find(list => list.title === "Fun")
-        
-
-
-    
-    
-    
-    
-
-    
+    const funList = lists.find(list => list.title === "Fun")
+    const{id, title, description, tasks}=funList
 
 
     function getFun(){
