@@ -65,13 +65,14 @@ function App() {
           handleTaskPatch={handleTaskPatch} 
           handleListDelete={handleListDelete}
         />
+        </Route>
         <Route path="/">
         <Home 
           lists={lists} 
           handleTaskPatch={handleTaskPatch} 
           handleListDelete={handleListDelete}
         />
-        </Route>
+        
         </Route>
       </Switch>
       

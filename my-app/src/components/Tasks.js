@@ -14,7 +14,7 @@ function Tasks({task, name, date, checked, handleTaskDelete, handleTaskUpdate}) 
         <tr>
             <td>{date}</td>
             <td>{name}</td>
-            <td><input type="checkbox" name="task" onChange={() => handleComplete(task)}/></td>
+            <td><input type="checkbox" name="task" checked={checked} onChange={() => handleComplete(task)}/></td>
             <td><button onClick={()=>handleTaskDelete(name)}>X</button></td>
         </tr>
     );

@@ -62,6 +62,19 @@
           "checked": true
         }
       ]
+    },
+    {
+      "id": 4,
+      "title": "Pets",
+      "description": "Pet to-do list",
+      "tasks": [
+        {
+          "id": 1,
+          "name": "take dogs for walk",
+          "date": "2021-09-22",
+          "checked": false
+        }
+      ]
     }
   ]
 }

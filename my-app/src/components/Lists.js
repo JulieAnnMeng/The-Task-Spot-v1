@@ -1,6 +1,7 @@
 import Tasks from './Tasks';
 import NewTask from './NewTask';
 import { useState } from 'react';
+import {Link} from "react-router-dom"
 
 
 
@@ -17,8 +18,14 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
         handleTaskPatch(id, newTasksList);
     }
 
+
     function handleNewTask(formData){
-        let newID = tasks.at(-1).id + 1;
+        let newID;
+        if(tasks[0]){
+            newID = tasks.at(-1).id + 1;
+        } else {
+            newID = 1;
+        }
         const newTask = {id: newID, name: formData.task, date: formData.date, checked: false};
         tasks.push(newTask);
         handleTaskPatch(id, tasks);
@@ -30,6 +37,7 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
                 task.checked = updatedTask.checked;
         }});
         // const newTasksList = {...tasks, task};
+        debugger;
         handleTaskPatch(id, tasks);
     }
 
@@ -59,10 +67,15 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
                 <caption className='listCards'>
                         
                     <h3>{title}</h3>
-                    <button onClick={()=>handleListDelete(id)}> Delete List </button>
+                    {
+                    title === "Fun" ? 
+                    <Link to={`/funlist`}><button>Add Fun</button></Link>
+                    : <button onClick={()=>handleListDelete(id)}> Delete List </button>
+                    }
                     <div> {description} </div>
                     <br /><br />
-                    {toggle === title ? 
+                    {
+                    toggle === title ? 
                         <button onClick={() => handleToggle(title)}>hide</button> 
                         : <button onClick={() => handleToggle(title)}>Add</button>
                     }

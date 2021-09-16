@@ -1,13 +1,15 @@
 import {Link} from "react-router-dom"
 
 function Header() {
+  // CSS to make links look like buttons
+
   return (
     <header>
       <h1>The Task Spot ☑</h1>
       {/* Below are the links */}
-      <Link to={`/`}>Home</Link>
-      <Link to={`/lists/new`}>Add New List</Link>
-      <Link to={`/funlist`}>Fun List</Link>
+      <Link to={`/`}><button>Home</button></Link>
+      <Link to={`/lists/new`}><button>Add New List</button></Link>
+      <Link to={`/funlist`}><button>Fun List</button></Link>
     </header>
   );
 }
