@@ -3,9 +3,12 @@ import Lists from './Lists';
 
 
 function ListLists({lists, handleTaskPatch, handleListDelete}) {
-    console.log(lists)
+    let listList = [];
 
-    const listList = lists.map((list)=>{
+    if(!lists){
+        return <h2>loading</h2>
+    } else {
+    listList = lists.map((list)=>{
         return(
             <Lists 
             key={list.id}
@@ -18,7 +21,7 @@ function ListLists({lists, handleTaskPatch, handleListDelete}) {
             handleListDelete={handleListDelete}
             />
         )
-    })
+    })}
 
     return (
         <div>

@@ -1,11 +1,15 @@
 import Tasks from './Tasks';
 import NewTask from './NewTask';
+import { useState } from 'react';
 
 
 
-function Lists({ id, title, description, tasks, handleTaskPatch, handleListDelete}) {
-    if(!tasks){
-     return <h2>loading</h2>
+function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete}) {
+    let taskList = [];
+    const [toggle, setToggle] = useState("")
+
+    function handleToggle (title) {
+        toggle === title ? setToggle("") : setToggle(title);
     }
 
     function handleTaskDelete (name) {
@@ -13,16 +17,38 @@ function Lists({ id, title, description, tasks, handleTaskPatch, handleListDelet
         handleTaskPatch(id, newTasksList);
     }
 
-    const taskList = tasks.map((task, index)=>{
-        return(
-            <Tasks 
-            key={index}
-            name={task.name}
-            date={task.date}
-            handleTaskDelete={handleTaskDelete}
-            />
-        )
-    })
+    function handleNewTask(formData){
+        let newID = tasks.at(-1).id + 1;
+        const newTask = {id: newID, name: formData.task, date: formData.date, checked: false};
+        tasks.push(newTask);
+        handleTaskPatch(id, tasks);
+    }
+
+    function handleTaskUpdate (updatedTask) {
+        tasks.map(task => {
+            if(task.id === updatedTask.id) {
+                task.checked = updatedTask.checked;
+        }});
+        // const newTasksList = {...tasks, task};
+        handleTaskPatch(id, tasks);
+    }
+
+    if(!tasks){
+        return <h2>loading</h2>
+    } else {
+        taskList = tasks.map((task, index)=>{
+            return(
+                <Tasks 
+                key={index}
+                task={task}
+                name={task.name}
+                date={task.date}
+                checked={task.checked}
+                handleTaskDelete={handleTaskDelete}
+                handleTaskUpdate={handleTaskUpdate}
+                />
+            )
+    })}
 
 
     //below is the list card, each list will be created with the table below. 
@@ -33,12 +59,14 @@ function Lists({ id, title, description, tasks, handleTaskPatch, handleListDelet
                 <caption className='listCards'>
                         
                     <h3>{title}</h3>
-                    <button onClick={()=>handleListDelete(id)}> x </button>
+                    <button onClick={()=>handleListDelete(id)}> Delete List </button>
                     <div> {description} </div>
                     <br /><br />
-                    
-                    <button>Add</button>
-                    <NewTask />
+                    {toggle === title ? 
+                        <button onClick={() => handleToggle(title)}>hide</button> 
+                        : <button onClick={() => handleToggle(title)}>Add</button>
+                    }
+                    {toggle === title ? <NewTask handleNewTask={handleNewTask}/> : null}
                 </caption>
                 <tbody>
                     <tr>

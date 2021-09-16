@@ -1,5 +1,5 @@
 import { useState} from 'react';
-import Lists from './Lists';
+// import Lists from './Lists';
 
 
 const funURL = "https://www.boredapi.com/api/activity"
@@ -11,7 +11,7 @@ function FunList() {
         .then(r=>r.json())
         .then(activityObj=>setFunActivity( activityObj.activity))
     }
-    console.log(funActivity)
+    // console.log(funActivity)
 
 
 
@@ -47,7 +47,7 @@ function FunList() {
                 <br />
                 <button type="submit">Submit</button>
             </form>
-            <Lists />
+            {/* <Lists /> */}
             {/* want to show fun lists on the page */}
         </div>
   );
