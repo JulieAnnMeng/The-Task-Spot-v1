@@ -1,19 +1,48 @@
+import { useState } from 'react';
+import { useParams, useHistory, Link } from 'react-router-dom'
 
 
-function NewList() {
+function NewList({lists, handleNewList}) {
+    /*  {id:1,
+        name:"",
+        date:"",
+        checked: false}
+    */
+
+    const blankForm = {
+        id: lists.at(-1) + 1,
+        title: "",
+        description: "",
+        tasks:[]
+    };
+    const [newListFormData, setNewListFormData] = useState(blankForm);
+
+    function handleNewListFormChange(e){
+        let name = e.target.name;
+        let value = e.target.value;
+        setNewListFormData({...newListFormData, [name]: value})
+    }
+
+
+    function handleNewListSubmit(e){
+        e.preventDefault();
+        handleNewList(newListFormData)
+    }
 
 
     return (
         <div className="newList">
-            <form>
+            <form onSubmit={handleNewListSubmit}>
                 <h2>Add your new list below</h2>
                 <br />
 
-                <label htmlFor="listName">Name </label>
+                <label htmlFor="title">Name </label>
                 <input 
-                name="listName" 
+                name="title" 
                 placeholder="List name"
                 type="text"
+                value={newListFormData.title}
+                onChange={(e)=>handleNewListFormChange(e)}
                 />
 
                 <label htmlFor="description">Description </label>
@@ -21,23 +50,32 @@ function NewList() {
                 name="description"
                 placeholder="List description"
                 type="text"
+                value={newListFormData.description}
+                onChange={(e)=>handleNewListFormChange(e)}
                 />
 
-                <h5>Add your first task below</h5>
+                {/*<h5>Add your first task below</h5>
+                
                 <input
                 type="date"
                 name="date"
+                value={newListFormData.tasks}
+                onChange={(e)=>handleNewListTask(e)}
                 />
 
                 <input
                 type="text"
-                name="task"
+                name="name"
                 placeholder="task"
-                />
+                value={newListFormData.tasks}
+                onChange={(e)=>handleNewListTask(e)}
+                />*/}
                 
                 <br /><br />
 
                 <button type="submit">Submit</button>
+
+                
             </form>
         </div>
     );

@@ -25,9 +25,9 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
     }
 
     function handleTaskUpdate (updatedTask) {
-        tasks.map(task => {
+        tasks.map(task => { 
             if(task.id === updatedTask.id) {
-                task.checked = updatedTask.checked;
+                   return task.checked = updatedTask.checked;
         }});
         // const newTasksList = {...tasks, task};
         handleTaskPatch(id, tasks);

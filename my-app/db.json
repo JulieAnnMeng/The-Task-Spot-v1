@@ -4,13 +4,12 @@
       "id": 1,
       "title": "Groceries",
       "description": "What to buy at Trader Joes",
-      "category": "food",
       "tasks": [
         {
           "id": 1,
           "name": "apples",
           "date": "2021-09-16",
-          "checked": true
+          "checked": false
         },
         {
           "id": 2,
@@ -36,7 +35,6 @@
       "id": 2,
       "title": "House Chores",
       "description": "Things to do around the house",
-      "category": "domestic",
       "tasks": [
         {
           "id": 1,
@@ -49,6 +47,19 @@
           "name": "clean room",
           "date": "2021-10-16",
           "checked": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Fun",
+      "description": "Fun activity ideas",
+      "tasks": [
+        {
+          "id": 1,
+          "name": "play tennis",
+          "date": "2021-09-16",
+          "checked": true
         }
       ]
     }
