@@ -13,13 +13,6 @@
           "checked": false
         },
         {
-          "id": 2,
-          "name": "Birthday party",
-          "date": "2021-10-07",
-          "priority": true,
-          "checked": false
-        },
-        {
           "id": 3,
           "name": "Halloween party",
           "date": "2021-10-31",
@@ -37,19 +30,12 @@
           "name": "Learn origami",
           "date": "2021-10-09",
           "priority": false,
-          "checked": false
+          "checked": true
         },
         {
           "id": 6,
-          "name": "Watch a movie you'd never usually watch",
-          "date": "2021-09-18",
-          "priority": false,
-          "checked": false
-        },
-        {
-          "id": 7,
-          "name": "Go see a movie in theaters with a few friends",
-          "date": "2022-01-01",
+          "name": "Have a paper airplane contest with some friends",
+          "date": "2021-09-24",
           "priority": false,
           "checked": false
         }
@@ -108,6 +94,13 @@
           "date": "2021-10-16",
           "priority": true,
           "checked": false
+        },
+        {
+          "id": 3,
+          "name": "vacuum ",
+          "date": "2021-09-22",
+          "priority": true,
+          "checked": false
         }
       ]
     },
@@ -131,16 +124,13 @@
           "checked": true
         }
       ]
-    }
-  ],
-  "funCards": [
-    {
-      "activity": "Listen to music you haven't heard in a while",
-      "id": 1
     },
     {
-      "activity": "Do something you used to do as a kid",
-      "id": 3
+      "id": 5,
+      "title": "coding",
+      "description": "to do list for class",
+      "tasks": []
     }
-  ]
+  ],
+  "funCards": []
 }

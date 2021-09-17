@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {Link} from "react-router-dom"
 //issue is tasks object within the form 
 // to fix the tasks issue so we can add a task to the new list
 //import { useParams, useHistory, Link } from 'react-router-dom'
@@ -35,6 +36,7 @@ function NewList({lists, handleNewList}) {
 
     return (
         <div className="newList">
+            
             <form onSubmit={handleNewListSubmit}>
                 <h2>Add your new list below</h2>
                 <br />
@@ -80,6 +82,7 @@ function NewList({lists, handleNewList}) {
 
                 
             </form>
+            
         </div>
     );
 }

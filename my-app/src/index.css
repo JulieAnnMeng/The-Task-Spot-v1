@@ -132,6 +132,10 @@ button:hover {
 .boredBoard>span>h2{
   font-size: 28px;
 }
+.boredBoard>h3{
+  font-size: 22px;
+  font-weight: bolder;
+}
 .boredBoard>span>p>div{
   font-size: 22px;
   font-weight: bolder;
