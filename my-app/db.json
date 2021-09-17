@@ -10,7 +10,7 @@
           "name": "play tennis",
           "date": "2021-09-16",
           "priority": false,
-          "checked": true
+          "checked": false
         },
         {
           "id": 2,
@@ -23,6 +23,27 @@
           "id": 3,
           "name": "Halloween party",
           "date": "2021-10-31",
+          "checked": false
+        },
+        {
+          "id": 4,
+          "name": "Watch the sunset or the sunrise",
+          "date": "2021-09-23",
+          "priority": false,
+          "checked": false
+        },
+        {
+          "id": 5,
+          "name": "Learn origami",
+          "date": "2021-10-09",
+          "priority": false,
+          "checked": false
+        },
+        {
+          "id": 6,
+          "name": "Watch a movie you'd never usually watch",
+          "date": "2021-09-18",
+          "priority": false,
           "checked": false
         }
       ]
@@ -107,8 +128,8 @@
   ],
   "funCards": [
     {
-      "id": 1,
-      "activity": "Watch the sunset or the sunrise"
+      "activity": "Listen to music you haven't heard in a while",
+      "id": 1
     }
   ]
 }

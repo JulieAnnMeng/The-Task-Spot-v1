@@ -35,12 +35,10 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
         tasks.map(task => task.id === updatedTask.id ? task.checked = updatedTask.checked : false)
         handleTaskPatch(id, tasks);
     }
-
-    if(!tasks){
-        return <h2>loading</h2>
-    } else {
-        taskList = tasks.map((task, index)=>{
-            return(
+    console.log(tasks)
+    tasks ? 
+        taskList = tasks.map((task, index) => {
+            return (
                 <Tasks 
                 key={index}
                 task={task}
@@ -52,7 +50,8 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
                 handleTaskUpdate={handleTaskUpdate}
                 />
             )
-    })}
+         })
+    : <h2>loading</h2>;
 
 
     //below is the list card, each list will be created with the table below. 

@@ -6,7 +6,8 @@ function Home({lists, handleTaskPatch, handleListDelete}) {
   return (
     <div>
         <h2>Welcome to the Task Spot.</h2>
-        <ListLists lists={lists} handleTaskPatch={handleTaskPatch} handleListDelete={handleListDelete}/>
+        {lists ? <ListLists lists={lists} handleTaskPatch={handleTaskPatch} handleListDelete={handleListDelete}/>
+        : <h2>Loading Lists...</h2>}
     </div>
   );
 }
