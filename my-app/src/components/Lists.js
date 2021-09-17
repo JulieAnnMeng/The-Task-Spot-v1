@@ -35,7 +35,7 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
         tasks.map(task => task.id === updatedTask.id ? task.checked = updatedTask.checked : false)
         handleTaskPatch(id, tasks);
     }
-    console.log(tasks)
+
     tasks ? 
         taskList = tasks.map((task, index) => {
             return (

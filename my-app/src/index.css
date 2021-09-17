@@ -31,6 +31,8 @@ header>h1{
 
 .home > h2{
   font-size: 30px;
+  padding-bottom: 10px;
+  background-color: white;
 }
 
 .listsDiv{
@@ -132,4 +134,8 @@ button:hover {
 .boredBoard>span>p>div{
   font-size: 22px;
   font-weight: bolder;
+}
+
+.home {
+  background-image: url('https://c1.wallpaperflare.com/preview/907/581/284/backdrop-background-blank-board.jpg');
 }

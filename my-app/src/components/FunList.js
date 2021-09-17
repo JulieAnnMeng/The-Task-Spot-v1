@@ -147,7 +147,7 @@ function FunList({lists, funCards, handleFunAdd, handleTaskPatch, handleListDele
             {funCards[0] ?
                 <span>
                     <h2>Bored Board</h2>
-                    <p>{funCard}</p>
+                    <div>{funCard}</div>
                 </span>
                 : <h3>Add fun ideas to the board</h3>}
             </div>

@@ -45,6 +45,13 @@
           "date": "2021-09-18",
           "priority": false,
           "checked": false
+        },
+        {
+          "id": 7,
+          "name": "Go see a movie in theaters with a few friends",
+          "date": "2022-01-01",
+          "priority": false,
+          "checked": false
         }
       ]
     },
@@ -130,6 +137,10 @@
     {
       "activity": "Listen to music you haven't heard in a while",
       "id": 1
+    },
+    {
+      "activity": "Do something you used to do as a kid",
+      "id": 3
     }
   ]
 }
