@@ -31,7 +31,6 @@ function FunCard ({id, fun, tasks, handleTaskPatch, handleFunDelete}) {
         <div>
             <h4>{fun}</h4>
             <button onClick={showDate}>+</button>
-            <br/>
             {toggle ? 
                 <><input
                     type="date"

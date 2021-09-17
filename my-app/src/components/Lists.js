@@ -61,14 +61,13 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
             <table className="listCards">
                 <caption className='listCardsCaption'>
                         
-                    <h3>{title}</h3>
+                    <p>{title}</p>
                     {
                     title === "Fun" ? 
                     <Link to={`/funlist`}><button>Add Fun</button></Link>
                     : <button onClick={()=>handleListDelete(id)}> Delete List </button>
                     }
-                    <div> {description} </div>
-                    <br /><br />
+                    <span> {description} </span>
                     {
                     toggle === title ? 
                         <button onClick={() => handleToggle(title)}>hide</button> 
