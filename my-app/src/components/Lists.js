@@ -57,9 +57,9 @@ function Lists({id, title, description, tasks, handleTaskPatch, handleListDelete
     //below is the list card, each list will be created with the table below. 
     //need to add a border to table
     return (
-        <div>
+        <div className="listCardsDiv">
             <table className="listCards">
-                <caption className='listCards'>
+                <caption className='listCardsCaption'>
                         
                     <h3>{title}</h3>
                     {

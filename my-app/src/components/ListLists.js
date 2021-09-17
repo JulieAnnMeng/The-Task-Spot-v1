@@ -24,7 +24,7 @@ function ListLists({lists, handleTaskPatch, handleListDelete}) {
     })}
 
     return (
-        <div>
+        <div className="listsDiv">
             {listList}
         </div>
     );
