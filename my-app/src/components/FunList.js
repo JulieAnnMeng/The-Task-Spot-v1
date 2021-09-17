@@ -130,7 +130,7 @@ function FunList({lists, funCards, handleFunAdd, handleTaskPatch, handleListDele
                 <button type="submit">Submit</button> */}
             {/* </form> */}
             
-
+            <div className="boredBoard">
             {funList ? 
                 <Lists 
                     key={funList.id}
@@ -142,13 +142,15 @@ function FunList({lists, funCards, handleFunAdd, handleTaskPatch, handleListDele
                     handleTaskPatch={handleTaskPatch}
                     handleListDelete={handleListDelete}
                 /> 
+                
             : <h2>Loading...</h2> }
             {funCards[0] ?
-                <div>
+                <span>
                     <h2>Bored Board</h2>
                     <p>{funCard}</p>
-                </div>
+                </span>
                 : <h3>Add fun ideas to the board</h3>}
+            </div>
             
         </div>
   );

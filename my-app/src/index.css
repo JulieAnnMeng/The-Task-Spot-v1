@@ -4,7 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-	font-family:'Times New Roman', Times, serif;
+	font-family: American Typewriter, serif;
 }
 
 code {
@@ -13,13 +13,24 @@ code {
 
 header {
   background-color: rgba(105, 199, 236, 0.657);
-  height: 110px;
+  height: 180px;
   padding: 20px, 20px, 20px, 20px;
+  font-family: American Typewriter, serif;
+  font-size: 34px;
 
 }
 header>h1{
   margin-top: 0px;
   padding-top: 5px;
+  margin-bottom: 15px;
+}
+
+.App{
+  font-family: American Typewriter, serif;
+}
+
+.home > h2{
+  font-size: 30px;
 }
 
 .listsDiv{
@@ -31,10 +42,11 @@ header>h1{
 }
 
 .listCards{
-  background-image: url("https://cdn2.vectorstock.com/i/1000x1000/16/01/graph-paper-background-vector-3851601.jpg");
+  background-image: url("https://getwallpapers.com/wallpaper/full/4/d/5/1085195-gorgerous-grid-wallpaper-1920x1200-desktop.jpg");
   width:400px;
   padding: 10px 10px 10px 10px;
   margin: auto;
+  font-size: 20px;
 
 }
 
@@ -101,7 +113,7 @@ button:hover {
 }
 
 .newList{
-  background-image: url('https://c1.wallpaperflare.com/preview/907/581/284/backdrop-background-blank-board.jpg');
+  background-image:  url("https://getwallpapers.com/wallpaper/full/4/d/5/1085195-gorgerous-grid-wallpaper-1920x1200-desktop.jpg");
   padding: 10px, 10px, 10px, 10px;
   font-weight: bold;
   font-size: 20px;
@@ -109,4 +121,15 @@ button:hover {
 
 .headerButton{
   border-radius: 10%;
+}
+
+.boredBoard{
+  background-image:  url("https://getwallpapers.com/wallpaper/full/4/d/5/1085195-gorgerous-grid-wallpaper-1920x1200-desktop.jpg");
+}
+.boredBoard>span>h2{
+  font-size: 28px;
+}
+.boredBoard>span>p>div{
+  font-size: 22px;
+  font-weight: bolder;
 }

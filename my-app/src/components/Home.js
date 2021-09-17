@@ -4,7 +4,7 @@ import ListLists from './ListLists';
 function Home({lists, handleTaskPatch, handleListDelete}) {
     
   return (
-    <div>
+    <div className="home">
         <h2>Welcome to the Task Spot.</h2>
         {lists ? <ListLists lists={lists} handleTaskPatch={handleTaskPatch} handleListDelete={handleListDelete}/>
         : <h2>Loading Lists...</h2>}
